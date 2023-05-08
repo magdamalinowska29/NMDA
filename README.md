@@ -7,6 +7,8 @@ Create resource that is usefull for future
 
 Important: Make clear comments in the code 
 
+How do we organize Meetings? 
+
 Formulate Problems that arise during work 
 
 Work Steps FMRI 
@@ -25,3 +27,5 @@ Work Steps FMRI
 
 
 Work Steps EEG 
+
+
