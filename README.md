@@ -9,4 +9,8 @@ Important: Make clear comments in the code
 
 Formulate Problems that arise during work 
 
-matlab script realign.m sets up parameters in spm and performs realignment of data from a specified directory
+Work Steps FMRI 
+1. Realignment 
+   matlab script realign.m sets up parameters in spm and performs realignment of data from a specified directory
+   
+2. 
