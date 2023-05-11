@@ -4,6 +4,8 @@ inputs=cell(0, nrun);
 for crun=1:nrun
 end
 
+%check
+
 data_dir='C:\data\fM00223\fM00223*';% chooses only files that start with fM00223
 %data_dir='C:\data\fM00223\'; %chooses all files in the folder
 
