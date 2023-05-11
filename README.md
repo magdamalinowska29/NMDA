@@ -29,4 +29,7 @@ Work Steps FMRI
 Work Steps EEG 
 
 Andy's brain book: https://andysbrainbook.readthedocs.io/en/latest/
+
 Trello link: https://trello.com/invite/nmdaproject/ATTIa24a1aff6483514bd68294b97d5800ea7C22044A
+
+Link Overleaf Documentation: https://www.overleaf.com/6173874451znfhqrthsxfv
