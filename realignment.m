@@ -1,12 +1,14 @@
 function results = realignment(data_dir)
 
+%takes as input directory of the folder with functional data
+
 % List of open inputs
 nrun=1; %choose how many times to run the realignment
 inputs=cell(0, nrun);
 for crun=1:nrun
 end
 
-if ~data_dir
+if ~exist('data_dir','var')
 
    data_dir=pwd;
     %data_dir='C:\data\fM00223\fM00223*';% chooses only files that start with fM00223
