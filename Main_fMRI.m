@@ -51,4 +51,5 @@ normalise_functional(data_dir_structural,data_dir_functional);
 normalise_structural(data_dir_structural);
 
 %smooting
+smooth_images(data_dir_structural,data_dir_functional);
 
