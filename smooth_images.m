@@ -32,5 +32,3 @@ matlabbatches = repmat(matlabbatch, 1, nrun);
 
 % Run smoothing
 spm_jobman('run', matlabbatches, inputs{:});
-
-end
