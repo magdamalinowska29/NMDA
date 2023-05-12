@@ -22,11 +22,11 @@ file_list = dir(data_dir); % get a structure of image files in the directory
 file_names = strcat({file_list.folder}', filesep, {file_list.name}');
 
 % Set spm parameters
-matlabbatch{1}.spm.spatial.smooth.data = {file_names}';
-matlabbatch{1}.spm.spatial.smooth.fwhm = [8 8 8];
-matlabbatch{1}.spm.spatial.smooth.dtype = 0;
-matlabbatch{1}.spm.spatial.smooth.im = 0;
-matlabbatch{1}.spm.spatial.smooth.prefix = 's';
+matlabbatch{1}.spm.spatial.smooth.data = file_names; % Specify the file names of the normalized images to be smoothed.
+matlabbatch{1}.spm.spatial.smooth.fwhm = [8 8 8]; % Set the Full Width at Half Maximum (FWHM) of the Gaussian smoothing kernel to 8 mm in each dimension.
+matlabbatch{1}.spm.spatial.smooth.dtype = 0; % Set the data type of the smoothed images to the same as the input.
+matlabbatch{1}.spm.spatial.smooth.im = 0; % Perform implicit masking during smoothing, where zero values are excluded from the smoothing.
+matlabbatch{1}.spm.spatial.smooth.prefix = 's'; % Set the prefix for the smoothed images to 's'.
 
 matlabbatches = repmat(matlabbatch, 1, nrun); 
 
