@@ -1,5 +1,5 @@
 function results = smoothing(data_dir)
-% This function takes as input the path to the folder with the normalized images (functional or structural).
+% This function takes as input the path to the folder with the normalized images (functional).
 % It performs spatial smoothing on the data using a Gaussian kernel with a FWHM of 8 mm.
 % The smoothed images are saved with the prefix 's'.
 
@@ -16,9 +16,7 @@ end
 
 % get the normalised functional images
 data_dir_norm = strcat(data_dir, 'w*'); %here we specify to only use normalised functional images that start with w
-
 file_list_norm = dir(data_dir_norm); %get a structure of image files in directory
-
 file_names_norm = strcat({file_list_norm.folder}', filesep, {file_list_norm.name}');
 
 % Set spm parameters
