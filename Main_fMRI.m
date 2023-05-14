@@ -13,7 +13,7 @@ clear; %clear the workspace
 %proper files by concatenating the path with name patter e.g 'C:\data\r*'
 
 
-whichComp=2;
+whichComp=3;
 
 if whichComp==1
     spmPath='C:\Users\Marida\Documents\MATLAB\spm12';
@@ -23,7 +23,13 @@ elseif whichComp==2
     spmPath='C:\';
     data_dir_functional='C:\data\fM00223\'; %directory of functional files
     data_dir_structural='C:\data\sM00223\';%directory of structural files
-%add two more options
+elseif whichcomp==3
+    spmPath='C:\Program Files\Matlab\spm12';
+    data_dir_functional=['C:\Users\Androro\Documents\Università\Methods and ' ...
+        'Data Analysis II\2023\Resources\Example data\MoAEpilot\fM00223']; %directory of functional files
+    data_dir_structural=['C:\Users\Androro\Documents\Università\Methods ' ...
+        'and Data Analysis II\2023\Resources\Example data\MoAEpilot\sM00223'];%directory of structural files
+    %add one more option
 end
 
 %This script relies heavily on the default naming pattern of spm. If files
@@ -41,8 +47,9 @@ spm('defaults', 'FMRI');
 
 realignment(data_dir_functional); 
 
-%coreagistration
+%coregistration
 
+coregistration(data_dir_structural,data_dir_functional)
 
 %normalisation
 
@@ -52,4 +59,3 @@ normalise_structural(data_dir_structural);
 
 %smooting
 smoothing(data_dir_functional);
-
