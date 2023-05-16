@@ -1,6 +1,6 @@
 function results = smoothing(data_dir)
 % This function takes as input the path to the folder with the normalized images (functional).
-% It performs spatial smoothing on the data using a Gaussian kernel with a FWHM of 8 mm.
+% It performs spatial smoothing on the data using a Gaussian kernel with a FWHM of 6 mm.
 % The smoothed images are saved with the prefix 's'.
 
 % List of open inputs
@@ -21,7 +21,7 @@ file_names_norm = strcat({file_list_norm.folder}', filesep, {file_list_norm.name
 
 % Set spm parameters
 matlabbatch{1}.spm.spatial.smooth.data = file_names_norm; % Specify the file names of the normalized images to be smoothed.
-matlabbatch{1}.spm.spatial.smooth.fwhm = [8 8 8]; % Set the Full Width at Half Maximum (FWHM) of the Gaussian smoothing kernel to 8 mm in each dimension.
+matlabbatch{1}.spm.spatial.smooth.fwhm = [6 6 6]; % Set the Full Width at Half Maximum (FWHM) of the Gaussian smoothing kernel to 6 mm in each dimension.
 matlabbatch{1}.spm.spatial.smooth.dtype = 0; % Set the data type of the smoothed images to the same as the input.
 matlabbatch{1}.spm.spatial.smooth.im = 0; % Perform implicit masking during smoothing, where zero values are excluded from the smoothing.
 matlabbatch{1}.spm.spatial.smooth.prefix = 's'; % Set the prefix for the smoothed images to 's'.
