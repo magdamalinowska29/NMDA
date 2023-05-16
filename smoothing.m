@@ -1,7 +1,7 @@
 function results = smoothing(data_dir)
 % This function takes as input the path to the folder with the normalized images (functional).
 % It performs spatial smoothing on the data using a Gaussian kernel with a FWHM of 6 mm.
-% The smoothed images are saved with the prefix 's'.
+% The smoothed images are saved with the prefix 's'
 
 % List of open inputs
 nrun = 1; % choose how many times to run the smoothing
