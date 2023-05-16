@@ -30,4 +30,3 @@ matlabbatch{1}.spm.spatial.smooth.prefix = 's'; % Set the prefix for the smoothe
 matlabbatches = repmat(matlabbatch, 1, nrun);
 
 spm_jobman('run', matlabbatches, inputs{:});
-disp('Smoothing completed.');
