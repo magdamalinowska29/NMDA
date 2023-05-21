@@ -16,8 +16,9 @@ whichComp=2;
 
 if whichComp==1
     spmPath='C:\Users\Marida\Documents\MATLAB\spm12';
-    data_path='C:\data\auditory' % We specify only one data_path where fM00223 and sM00223 are located, no need two write separately
-    tpm_path = 'C:\Users\Marida\Documents\MATLAB\spm12\tpm\TPM.nii' 
+    data_path='C:\data\auditory\' % We specify only one data_path where fM00223 and sM00223 are located, no need two write separately
+    tpm_path = 'C:\Users\Marida\Documents\MATLAB\spm12\tpm\TPM.nii'; 
+    glm_dir='ADD';
 
 % By providing the tpm_path,we ensure that the script can locate the necessary file for segmentation step
 % regardless of the user running the code, without requiring manual modification of the file path. 
@@ -26,14 +27,17 @@ elseif whichComp==2
     spmPath='C:\';
     data_path='C:\data\';
     tpm_path='C:\spm12\tpm\TPM.nii';
+    glm_dir='C:\data\auditory\classical';
 elseif whichComp==3 
     spmPath='/Users/USERNAME/WHERE/spm12';
     data_path='ADD';
     tpm_path='Add';
+    glm_dir='ADD';
 else
     spmPath='/Users/USERNAME/WHERE/spm12';
     data_path='ADD';
     tpm_path='Add';
+    glm_dir='ADD';
 end
 
 addpath(spmPath)
@@ -49,4 +53,7 @@ spm('defaults', 'FMRI');
 
 %run preprocessing
 
-preprocessing(data_path,tpm_path)
+%preprocessing(data_path,tpm_path);
+
+%run first level GLM
+GLM(data_path,glm_dir);
