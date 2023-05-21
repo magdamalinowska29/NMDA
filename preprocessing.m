@@ -99,7 +99,7 @@ matlabbatch{3}.spm.spatial.preproc.warp.bb = [NaN NaN NaN
 % or sessions to a common reference space.
 
 matlabbatch{4}.spm.spatial.normalise.write.subj.def      = cellstr(spm_file(structural_images,'prefix','y_','ext','nii')); 
-matlabbatch{4}.spm.spatial.normalise.write.subj.resample = cellstr(functional_images);
+matlabbatch{4}.spm.spatial.normalise.write.subj.resample = cellstr(spm_file(functional_images,'prefix','r'));
 matlabbatch{4}.spm.spatial.normalise.write.woptions.vox  = [3 3 3];
 
 matlabbatch{4}.spm.spatial.normalise.write.woptions.bb = [-78 -112 -70
@@ -120,7 +120,7 @@ matlabbatch{5}.spm.spatial.normalise.write.woptions.vox = [1 1 3];
 % It performs spatial smoothing on the data using a Gaussian kernel with a FWHM of 6 mm.
 % The smoothed images are saved with the prefix 's'
 
-matlabbatch{6}.spm.spatial.smooth.data = cellstr(spm_file(functional_images,'prefix','w'));  % Specify the file names of the normalized images to be smoothed.
+matlabbatch{6}.spm.spatial.smooth.data = cellstr(spm_file(functional_images,'prefix','wr'));  % Specify the file names of the normalized images to be smoothed.
 matlabbatch{6}.spm.spatial.smooth.fwhm = [6 6 6]; % Set the Full Width at Half Maximum (FWHM) of the Gaussian smoothing kernel to 6 mm in each dimension.
 matlabbatch{6}.spm.spatial.smooth.dtype = 0; % Set the data type of the smoothed images to the same as the input.
 matlabbatch{6}.spm.spatial.smooth.im = 0;% Perform implicit masking during smoothing, where zero values are excluded from the smoothing.
