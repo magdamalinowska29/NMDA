@@ -18,7 +18,7 @@ if whichComp==1
     spmPath='C:\Users\Marida\Documents\MATLAB\spm12';
     data_path='C:\data\auditory\' % We specify only one data_path where fM00223 and sM00223 are located, no need two write separately
     tpm_path = 'C:\Users\Marida\Documents\MATLAB\spm12\tpm\TPM.nii'; 
-    glm_dir='ADD';
+    glm_dir='C:\data\auditory\classical';
 
 % By providing the tpm_path,we ensure that the script can locate the necessary file for segmentation step
 % regardless of the user running the code, without requiring manual modification of the file path. 
