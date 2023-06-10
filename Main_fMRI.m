@@ -18,9 +18,9 @@ if whichComp==1
     spmPath='C:\Users\Marida\Documents\MATLAB\spm12';
     data_path='C:\data\auditory\'; % We specify only one data_path where fM00223 and sM00223 are located, no need two write separately
     tpm_path = 'C:\Users\Marida\Documents\MATLAB\spm12\tpm\TPM.nii'; 
-    glm_dir='ADD';
-    glm2_dir='ADD';
-    glm2_sub_folders='ADD';
+    glm_dir='C:\data\auditory\GLM1';
+    glm2_dir='C:\data\SomaTI-Example\RFX1';
+    glm2_sub_folders='C:\data\SomaTI-Example';
     one_sample_ttest_input_pattern= '^con_0009\.img$';
     Anova_2x4_file_patterns={'^con_0009\.img$', '^con_0010\.img$', '^con_0011\.img$', '^con_0012\.img$', '^con_0013\.img$', '^con_0014\.img$', '^con_0015\.img$', '^con_0016\.img$'};
 
