@@ -90,4 +90,22 @@ matlabbatch{2}.spm.stats.fmri_est.spmmat = cellstr(fullfile(glm2_dir,"\SPM.mat")
 matlabbatch{2}.spm.stats.fmri_est.write_residuals = 0;
 matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;
 
+matlabbatch{3}.spm.stats.con.spmmat = cellstr(fullfile(glm2_dir,"\SPM.mat"));
+matlabbatch{3}.spm.stats.con.consess{1}.fcon.name = 'Condition';
+matlabbatch{3}.spm.stats.con.consess{1}.fcon.weights = [1 -1 0 0 0 0 0.25 0.25 0.25 0.25 -0.25 -0.25 -0.25 -0.25];
+matlabbatch{3}.spm.stats.con.consess{1}.fcon.sessrep = 'none';
+matlabbatch{3}.spm.stats.con.consess{2}.fcon.name = 'Location';
+matlabbatch{3}.spm.stats.con.consess{2}.fcon.weights = [0 0 1 -0.333333333333333 -0.333333333333333 -0.333333333333333 0.5 -0.166666666666667 -0.166666666666667 -0.166666666666667 0.5 -0.166666666666667 -0.166666666666667 -0.166666666666667
+                                                        0 0 -0.333333333333333 1 -0.333333333333333 -0.333333333333333 -0.166666666666667 0.5 -0.166666666666667 -0.166666666666667 -0.166666666666667 0.5 -0.166666666666667 -0.166666666666667
+                                                        0 0 -0.333333333333333 -0.333333333333333 1 -0.333333333333333 -0.166666666666667 -0.166666666666667 0.5 -0.166666666666667 -0.166666666666667 -0.166666666666667 0.5 -0.166666666666667
+                                                        0 0 -0.333333333333333 -0.333333333333333 -0.333333333333333 1 -0.166666666666667 -0.166666666666667 -0.166666666666667 0.5 -0.166666666666667 -0.166666666666667 -0.166666666666667 0.5];
+matlabbatch{3}.spm.stats.con.consess{2}.fcon.sessrep = 'none';
+matlabbatch{3}.spm.stats.con.consess{3}.fcon.name = 'Interaction';
+matlabbatch{3}.spm.stats.con.consess{3}.fcon.weights = [0 0 0 0 0 0 1 -0.333333333333333 -0.333333333333333 -0.333333333333333 -1 0.333333333333333 0.333333333333333 0.333333333333333
+                                                        0 0 0 0 0 0 -0.333333333333333 1 -0.333333333333333 -0.333333333333333 0.333333333333333 -1 0.333333333333333 0.333333333333333
+                                                        0 0 0 0 0 0 -0.333333333333333 -0.333333333333333 1 -0.333333333333333 0.333333333333333 0.333333333333333 -1 0.333333333333333
+                                                        0 0 0 0 0 0 -0.333333333333333 -0.333333333333333 -0.333333333333333 1 0.333333333333333 0.333333333333333 0.333333333333333 -1];
+matlabbatch{3}.spm.stats.con.consess{3}.fcon.sessrep = 'none';
+matlabbatch{3}.spm.stats.con.delete = 0;
+
 spm_jobman('run', matlabbatch);
