@@ -57,4 +57,11 @@ matlabbatch{2}.spm.stats.fmri_est.spmmat = {fullfile(glm_dir,'\SPM.mat')};
 matlabbatch{2}.spm.stats.fmri_est.write_residuals = 0;
 matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;
 
+matlabbatch{3}.spm.stats.con.spmmat = {fullfile(glm_dir,'\SPM.mat')};
+matlabbatch{3}.spm.stats.con.consess{1}.tcon.name = 'Listening > Rest';
+matlabbatch{3}.spm.stats.con.consess{1}.tcon.weights = [1 0];
+matlabbatch{3}.spm.stats.con.consess{2}.tcon.name = 'Rest > Listening';
+matlabbatch{3}.spm.stats.con.consess{2}.tcon.weights = [-1 0];
+
+
 spm_jobman('run', matlabbatch);
