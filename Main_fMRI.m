@@ -38,10 +38,12 @@ elseif whichComp==2
     Anova_2x4_file_patterns={'^con_0009\.img$', '^con_0010\.img$', '^con_0011\.img$', '^con_0012\.img$', '^con_0013\.img$', '^con_0014\.img$', '^con_0015\.img$', '^con_0016\.img$'};
 
 elseif whichComp==3 
-    spmPath='/Users/USERNAME/WHERE/spm12';
-    data_path='ADD';
-    tpm_path='Add';
+    spmPath='C:\Program Files\Matlab\spm12';
+    data_path='C:\Users\Androro\Documents\Università\Methods and Data Analysis II\2023\Resources\Example data\MoAEpilot';
+    tpm_path='C:\Program Files\Matlab\spm12\spm12\TPM.nii';
     glm_dir='ADD';
+    one_sample_ttest_input_pattern= '^con_0009\.img$';
+    Anova_2x4_file_patterns={'^con_0009\.img$', '^con_0010\.img$', '^con_0011\.img$', '^con_0012\.img$', '^con_0013\.img$', '^con_0014\.img$', '^con_0015\.img$', '^con_0016\.img$'};
 else
     spmPath='/Users/USERNAME/WHERE/spm12';
     data_path='ADD';
