@@ -3,7 +3,7 @@ function results=preprocessing(data_path,tpm_path)
 %function that takes as arguments path to  data folder and a path to tpm
 %file. Performs all preprocessing steps (realignment, coregistration, segmentation, ormalisation and smoothing) and writes result files
 
-if ~exist('data_path','var')
+if ~exist('data_path','var') %We check if the data_path argument is provided. If not, it assigns the current working directory (pwd) to data_path.
     data_path = pwd;
    
 end
