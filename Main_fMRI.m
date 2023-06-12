@@ -1,5 +1,5 @@
 %fMRI processing, main script
-
+%does a setup and will execute processing steps saved as functions in other scripts. 
 %preparation
 close all; %close figures
 clear; %clear the workspace 
